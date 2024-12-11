@@ -1,0 +1,28 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="25.0.3">
+  <diagram name="Page-1" id="2cc2dc42-3aac-f2a9-1cec-7a8b7cbee084">
+    <mxGraphModel dx="2647" dy="2377" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VC68-qOmvCR6OxHIiqnw-1" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="80" y="-830" width="630" height="630" as="geometry" />
+        </mxCell>
+        <mxCell id="VC68-qOmvCR6OxHIiqnw-2" value="HOME | NUTRITION | RECIPES | iNGREDIENTS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="-820" width="310" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VC68-qOmvCR6OxHIiqnw-3" value="TITLE" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="-820" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VC68-qOmvCR6OxHIiqnw-5" value="Information about nutritional health" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="-720" width="490" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="VC68-qOmvCR6OxHIiqnw-6" value="Contact Form" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="-480" width="490" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="VC68-qOmvCR6OxHIiqnw-7" value="Footer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="-280" width="490" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

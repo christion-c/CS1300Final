@@ -1,19 +1,92 @@
 /* All of the website's CSS needs to be in this file. utilize id's to apply targeted styles */
 
-body {
+/* GENERSL LSYOUT */
+html, body {
+    height: 100%;
+    display: flex;
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #A52422;
+    flex-direction: column;
 }
 
+/* NAVIGATION */
 nav {
-    background-color: #000000;
-    color: white;
+    display: flex;
+    justify-content: flex-end;
+    background-color: transparent;
     padding: 1rem;
+}
+
+nav .nav-container {
+    background-color: #DBBEA1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 1rem;
+    border-radius: 20px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 4px 12px;
+    position: relative;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+
+nav ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    display: block;
+    background: #0C7C59;
+    margin: auto;
+    transition: 0.5s;
+}
+
+nav ul li:hover::after {
+    width: 100%
+}
+
+/*MAIN SECTION */
+main {
+    flex: 1;
+    padding: 1rem;
+}
+
+/*FOOTER */
+footer {
+    display: flex;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+footer p {
+    color: black;
+    
+}
+
+footer .footer-container {
+    background-color:#DBBEA1;
+    color: white;
+    padding: 0.125rem 0.5rem;
+    border-radius: 10px;
+    text-align: center;
+
 }

@@ -97,16 +97,28 @@ nav ul li:hover::after {
 
 #API {
     display: flex;
+    background-color: #1B6C3E;
     flex-direction: column;
     border-style: solid;
     border-radius: 20px;
     margin: 2rem auto;
-    max-width: 650px;
+    max-width: 850px;
     text-align: center;
 }
 
+#API, #searchInput {
+    padding: 5px;
+    text-align: center;
+}
 #API, #searchButton {
-    padding: 100px;
+    padding: 20px;
+}
+
+#API, #recipeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 form {

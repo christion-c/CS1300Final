@@ -38,19 +38,18 @@ nav .nav-container {
     border-style: solid;
     border-radius: 20px;
     box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
-
 }
 
 nav h1 {
 
     color: rgb(255, 255, 255);
 }
+
 nav ul {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
-    
 }
 
 nav ul li {
@@ -94,6 +93,20 @@ nav ul li:hover::after {
 
 #introduction p {
     text-align: center;
+}
+
+#API {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-radius: 20px;
+    margin: 2rem auto;
+    max-width: 650px;
+    text-align: center;
+}
+
+#API, #searchButton {
+    padding: 100px;
 }
 
 form {

@@ -1,61 +1,66 @@
+const apiKey = "BBUBdSjNqcCSNeO4WkunHw==dwQzTN72xB5vmvq3Y"; 
 
-const API_URL = 'https://foodfacts-foodfacts-v1.p.rapidapi.com/food_products_per_search_term/format/json'; 
+const searchBtn = document.getElementById('searchBtn');
+const dishInput = document.getElementById('dishInput');
+const nutritionResults = document.getElementById('nutritionResults');
 
-async function getNutritionalInfo() {
-  const ingredient = document.getElementById('ingredient-input').value.trim();
-  if (!ingredient) {
-    alert("Please enter an ingredient.");
-    return;
-  }
+// Function to fetch nutrition data from the API
+async function getNutritionData(dish) {
+    const apiUrlurl = `https://api.calorieninjas.com/v1/nutrition?query=${dish}`;
 
-  const nutritionalInfoDiv = document.getElementById('nutritional-info');
-  nutritionalInfoDiv.innerHTML = 'Loading...';
-  try {
-    const response = await fetch(`${API_URL}https://foodfacts-foodfacts-v1.p.rapidapi.com/food_products_per_search_term/format/json`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        ingredients: [{ food: ingredient }]
-      })
-    });
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-Api-Key': apiKey
+        }
+    };
 
-    const data = await response.json();
+    try {
+        const response = await fetch(url, options);
+        const data = await response.json();
 
-    if (data && data.parsed) {
-      const nutrients = data.parsed[0].food.nutrients;
-      displayNutritionalInfo(nutrients);
+        if (data.items && data.items.length > 0) {
+            displayNutritionFacts(data.items[0]);
+        } else {
+            nutritionResults.innerHTML = "<p>No nutrition information found for this dish.</p>";
+        }
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        nutritionResults.innerHTML = "<p>Error fetching data. Please try again later.</p>";
+    }
+}
+
+// Function to display the nutrition facts on the webpage
+function displayNutritionFacts(item) {
+    const { name, calories, protein_g, fat_g, carbohydrates_g, sugar_g, fiber_g } = item;
+    
+    let nutritionText = `<h2>Nutrition Facts for ${name}</h2>`;
+    nutritionText += `
+        <p><strong>Calories:</strong> ${calories} kcal</p>
+        <p><strong>Protein:</strong> ${protein_g} g</p>
+        <p><strong>Fat:</strong> ${fat_g} g</p>
+        <p><strong>Carbohydrates:</strong> ${carbohydrates_g} g</p>
+        <p><strong>Sugar:</strong> ${sugar_g} g</p>
+        <p><strong>Fiber:</strong> ${fiber_g} g</p>
+    `;
+
+    nutritionResults.innerHTML = nutritionText;
+}
+
+// Event listener for the search button
+searchBtn.addEventListener('click', () => {
+    const dish = dishInput.value.trim();
+    
+    if (dish) {
+        getNutritionData(dish);
     } else {
-      nutritionalInfoDiv.innerHTML = 'Sorry, nutritional info not found for this ingredient.';
+        nutritionResults.innerHTML = "<p>Please enter a dish name.</p>";
     }
-  } catch (error) {
-    console.error(error);
-    nutritionalInfoDiv.innerHTML = 'Error retrieving nutritional data.';
-  }
-}
+});
 
-// Function to display nutritional info
-function displayNutritionalInfo(nutrients) {
-  const nutritionalInfoDiv = document.getElementById('nutritional-info');
-  nutritionalInfoDiv.innerHTML = '';
-
-  const nutrientKeys = [
-    { label: 'Calories', key: 'ENERC_KCAL' },
-    { label: 'Protein (g)', key: 'PROCNT' },
-    { label: 'Fat (g)', key: 'FAT' },
-    { label: 'Carbohydrates (g)', key: 'CHOCDF' },
-    { label: 'Fiber (g)', key: 'FIBTG' },
-    { label: 'Sugar (g)', key: 'SUGAR' },
-  ];
-
-  nutrientKeys.forEach((nutrient) => {
-    const value = nutrients[nutrient.key];
-    if (value) {
-      const div = document.createElement('div');
-      div.classList.add('nutritional-item');
-      div.textContent = `${nutrient.label}: ${value.toFixed(2)} ${nutrient.key === 'ENERC_KCAL' ? 'kcal' : 'g'}`;
-      nutritionalInfoDiv.appendChild(div);
+// Allow the user to press Enter to search
+dishInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        searchBtn.click();
     }
-  });
-}
+});

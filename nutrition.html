@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutrition Information</title>
@@ -7,7 +8,6 @@
 </head>
 <body>
 
-    <nav>
         <div class="Icon">
         <h1>Nutrition Tracker</h1>
         </div>
@@ -18,25 +18,24 @@
                 <li><a href="ingredients.html">INGREDIENTS</a></li>
             </ul>
         </div>
-    </nav>
-
-        <section class="contact">
-            <form>
-                <h2>Contact Us</h2>
-                <label for="fname">First name</label>
-                <input type="text" id="fname" name="fname"><br>
-                <label for="lname">Last name</label>
-                <input type="text" id="lname" name="lname"><br>
-                <button type="submit">Submit</button>
-              </form>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-container">
-            <p>Project by: Christion Callahan | Braden Schnaufer | Kong Myat | Shay Duff</p>
-        </div>
-    </footer>
+        <header>
+            <h1>Dish Nutrition Facts Finder</h1>
+            <p>Enter a dish name to get the nutrition facts.</p>
+        </header>
+    
+        <main>
+            <div class="search-container">
+                <input type="text" id="dishInput" placeholder="Enter a dish (e.g., pizza, salad)" />
+                <button id="searchBtn">Get Nutrition Facts</button>
+            </div>
+    
+            <div id="nutritionResults" class="nutrition-info">
+                <!-- Nutrition results will be displayed here -->
+            </div>
+        </main>
+    
+        <footer>
+        </footer>
      <script scr="assets/js/nutrition.js"></script>/
 </body>
 </html>

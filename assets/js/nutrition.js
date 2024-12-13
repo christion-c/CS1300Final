@@ -6,7 +6,7 @@ const nutritionResults = document.getElementById('nutritionResults');
 
 // Function to fetch nutrition data from the API
 async function getNutritionData(dish) {
-    const apiUrlurl = `https://api.calorieninjas.com/v1/nutrition?query=${dish}`;
+    const apiUrl = `https://api.calorieninjas.com/v1/nutrition?query=${dish}`;
 
     const options = {
         method: 'GET',
@@ -16,7 +16,7 @@ async function getNutritionData(dish) {
     };
 
     try {
-        const response = await fetch(url, options);
+        const response = await fetch(apiUrl, options); //Corrected variable bs
         const data = await response.json();
 
         if (data.items && data.items.length > 0) {

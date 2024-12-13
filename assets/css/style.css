@@ -5,10 +5,16 @@ html, body {
     height: 100%;
     display: flex;
     margin: 0;
-    font-family: Arial, sans-serif;
+    
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+
     line-height: 1.6;
     background-color: #6C0F16;
     flex-direction: column;
+    color: white;
 }
 
 * {
@@ -55,9 +61,9 @@ nav ul li {
 }
 
 nav ul li a {
-    color: black;
     text-decoration: none;
     position: relative;
+    color: white;
 }
 
 nav ul li::after {
@@ -83,6 +89,7 @@ nav ul li:hover::after {
     margin: 10px auto;
     flex: 1;
     padding: 1rem;
+    border-color: black;
 }
 
 #introduction p {
@@ -125,11 +132,6 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 1rem;
-}
-
-footer p {
-    color: black;
-    
 }
 
 footer .footer-container {

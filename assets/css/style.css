@@ -7,7 +7,7 @@ html, body {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #e95d69;
+    background-color: #6C0F16;
     flex-direction: column;
 }
 
@@ -24,7 +24,7 @@ nav {
 }
 
 nav .nav-container {
-    background-color: #DBBEA1;
+    background-color: #CFB58C;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -35,11 +35,16 @@ nav .nav-container {
 
 }
 
+nav h1 {
+
+    color: rgb(255, 255, 255);
+}
 nav ul {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
+    
 }
 
 nav ul li {
@@ -60,7 +65,7 @@ nav ul li::after {
     width: 0;
     height: 2px;
     display: block;
-    background: #0C7C59;
+    background: #333A2C;
     margin: auto;
     transition: width 0.5s ease;
 }
@@ -71,7 +76,7 @@ nav ul li:hover::after {
 
 /*MAIN SECTION */
 #introduction {
-    background-color: #1B6C3e;
+    background-color: #1B6C3E;
     border-style: solid;
     max-width: 800px;
     text-align: center;
@@ -128,7 +133,7 @@ footer p {
 }
 
 footer .footer-container {
-    background-color:#DBBEA1;
+    background-color:#CFB58C;
     color: white;
     padding: 0.125rem 0.5rem;
     border-radius: 10px;

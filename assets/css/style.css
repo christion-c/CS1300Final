@@ -95,6 +95,20 @@ nav ul li:hover::after {
     text-align: center;
 }
 
+#NIT {
+
+    
+        display: flex;
+        background-color: #1B6C3E;
+        flex-direction: column;
+        border-style: solid;
+        border-radius: 30px;
+        margin: 2rem auto;
+        max-width: 1000px;
+        text-align: center;
+    }
+
+
 #API {
     display: flex;
     background-color: #1B6C3E;

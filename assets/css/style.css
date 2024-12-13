@@ -71,7 +71,7 @@ nav ul li:hover::after {
 
 /*MAIN SECTION */
 #introduction {
-    background-color: #788c69;
+    background-color: #1B6C3e;
     border-style: solid;
     max-width: 800px;
     text-align: center;
@@ -85,7 +85,7 @@ nav ul li:hover::after {
 }
 
 form {
-    background-color: #788c69;
+    background-color: #1B6C3E;
     display: flex;
     flex-direction: column;
     border-style: solid;
